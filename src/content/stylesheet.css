@@ -1,0 +1,165 @@
+* {
+	border-style:solid;
+	border-width:0;
+}
+body {
+	font-family:Verdana, sans-serif;
+	font-size:15px;
+	color:#d4d4d4;
+	margin:0 10px;
+	background-color:#0a0a0a;
+	background-image:linear-gradient(#333, #0a0a0a);
+	background-repeat:repeat-x;
+	background-size:auto 400px;
+}
+
+h1, h2, h3 {
+	color:#ffe;
+	text-align:center;
+	font-size:60px;
+	text-shadow:0 0 3px #000, 0 0 15px #678;
+}
+h1 {
+	margin:30px 0;
+}
+h2 {
+	font-size:40px;
+	margin:-10px 0 25px;
+}
+h3 {
+	font-size:22px;
+	border:2px solid rgba(0,0,255,0.5);
+	background-color:rgba(0,0,255,0.2);
+	border-radius:10px;
+	padding:3px 4px 4px;
+	margin:15px 0 17px;
+}
+p {
+	font-size:17px;
+	line-height:155%;
+}
+a {
+	color:#4060ff;
+	text-decoration:none;
+	text-shadow:0 0 4px #57f;
+}
+
+table {
+	border-collapse:separate;
+	border-spacing:3px 1px;
+	margin:auto;
+	margin-bottom:65px;
+	width:95%;
+}
+th, td {
+	border-radius:5px;
+	padding:3px 6px;
+	text-align:left;
+}
+th:first-child, td:first-child {
+	width:70px;
+}
+th {
+	border:2px solid rgba(128,0,255,0.3);
+	background-color:rgba(128,0,255,0.1);
+	padding-left:25px;
+}
+td {
+	border:2px solid rgba(255,0,0,0.3);
+	background-color:rgba(255,0,0,0.1);
+}
+td span {
+	word-break:break-all;
+	display:block;
+}
+td span span {
+	display:inline;
+}
+td a {
+	border:1px solid rgba(0,255,0,0.25);
+	background-color:rgba(0,255,0,0.1);
+	border-radius:2px;
+	margin-left:10px;
+	padding:0 3px 1px;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:85%;
+}
+
+.text {
+	margin:auto;
+	max-width:800px;
+}
+#content {
+	display:none;
+	margin-bottom:100px;
+}
+#cnvsdiv {
+	text-align:center;
+}
+#cnvs {
+	overflow:hidden;
+	margin:50px;
+}
+
+form {
+	display:none;
+}
+.host {
+	color:grey;
+}
+.title {
+	font-weight:bold;
+	font-size:110%;
+	padding-right:25px;
+}
+.hiddenrow {
+	display:none;
+}
+.showrow td {
+	border:2px solid rgba(255,96,0,0.3);
+	background-color:rgba(255,96,0,0.1);
+	padding-left:25px;
+}
+.showrow a {
+	border:0;
+	background-color:transparent;
+	padding:0 3px 5px;
+	font-size:110%;
+}
+
+.pages {
+	float:right;
+}
+.pages span {
+	border-radius:2px;
+	margin:0 1px;
+	padding:0 3px 1px;
+	color:#fff;
+	font-size:80%;
+}
+.rbt {
+	border:1px solid rgba(128,128,128,0.5);
+	background-color:rgba(128,128,128,0.2);
+}
+.html {
+	border:1px solid rgba(255,128,0,0.5);
+	background-color:rgba(255,128,0,0.2);
+}
+.css {
+	border:1px solid rgba(0,0,255,0.5);
+	background-color:rgba(0,0,255,0.2);
+}
+.js {
+	border:1px solid rgba(255,255,0,0.5);
+	background-color:rgba(255,255,0,0.2);
+}
+.json {
+	border:1px solid rgba(0,0,0,0.5);
+	background-color:rgba(0,0,0,0.2);
+}
+.red {
+	border:1px solid rgba(255,0,0,0.5);
+	background-color:rgba(255,0,0,0.2);
+}

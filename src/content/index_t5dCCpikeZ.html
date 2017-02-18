@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>BOTTEST DY FI - Web robot honeypot</title>
+	<link rel="stylesheet" href="/stylesheet.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/content.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Web robot honeypot</h1>
+	</header>
+	<div class="text">
+		<form action="/l" method="post">
+			<label>Username <input type="text" name="login"></label>
+			<label>Password <input type="password" name="password"></label>
+			<input type="submit" name="login" value="Log in" />
+		</form>
+		<form action="/p" method="post">
+			<label>Title <input type="text" name="title"></label>
+			<label>Message <textarea name="message"></textarea></label>
+			<input type="submit" name="send" value="Send" />
+		</form>
+		<p>
+			This web page was created as an experiment to see what kind of data bots, spammers, hackers and everyone else send to websites in their HTTP requests.
+			 There's also hidden login and message sending forms on this page to collect a bit more data from forum spammers.
+			 Coming here normally with a web browser however, will not record any data unless the browser sets a referer (and it probably does).
+			 A collection of various data that has recently been sent to this website can be seen right below.
+			 The code for this honeypot is also available on <a href="https://github.com/AnttiVainio/Web-robot-honeypot" target="_blank">GitHub</a>.
+		</p>
+	</div>
+	<div id="cnvsdiv">
+		<noscript><p>while(1) alert(&quot;You are hacked!&quot;); &nbsp;&nbsp; I-I mean... ahem... maybe you want to enable JavaScript to get some actual content on this site.</p></noscript>
+		<canvas id="cnvs" width="80" height="80"></canvas>&nbsp;
+		<script>
+			/* Create a nice loading circle in the canvas */
+			/* The animation is stopped in content.js */
+			var SIZE = 80 / 2;
+			var c = document.getElementById("cnvs");
+			var ctx = c.getContext("2d");
+			ctx.strokeStyle = "white";
+			ctx.lineWidth = 10;
+			var pos = 3;
+			var stop = false;
+			function cycle() {
+				ctx.clearRect(0, 0, SIZE * 2, SIZE * 2);
+				pos+= 0.15;
+				var pos1 = Math.floor(pos);
+				var pos2 = pos - pos1;
+				pos1*= Math.PI / 5.0;
+				for(var i = 0; i < 4; i++) {
+					ctx.beginPath();
+						ctx.arc(SIZE, SIZE, SIZE - 5, pos1 + (0.02 + i * 0.2) * Math.PI, pos1 + (0.18 + i * 0.2) * Math.PI);
+					ctx.stroke();
+				}
+				ctx.beginPath();
+					ctx.arc(SIZE, SIZE, SIZE - 5, pos1 - (0.18 + pos2) * Math.PI, pos1 - (0.02 + pos2) * Math.PI);
+				ctx.stroke();
+				if(!stop) setTimeout(cycle, 30);
+			}
+			cycle();
+		</script>
+	</div>
+	<div id="content" class="text"></div>
+</body>
+</html>
